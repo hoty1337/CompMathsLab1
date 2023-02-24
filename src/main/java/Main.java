@@ -53,14 +53,6 @@ public class Main {
 			} else {
 				det *= A[p][p];   // считаем определитель по главной диагонали
 			}
-			System.out.println("!!!!!!!!!!!!!!!!!!!!!");
-			for(int i = 0; i < n; i++) {
-				for(int j = 0; j < n; j++) {
-					System.out.print(A[i][j] + " ");
-				}
-				System.out.println(b[i]);
-			}
-			System.out.println("!!!!!!!!!!!!!!!!!!!!!");
 
 			for (int i = p + 1; i < n; i++) { // приводим матрицу к треугольному виду
 				double alpha = A[i][p] / A[p][p];
@@ -69,16 +61,7 @@ public class Main {
 					A[i][j] -= alpha * A[p][j];
 				}
 			}
-			System.out.println("-----------------------");
-			for(int i = 0; i < n; i++) {
-				for(int j = 0; j < n; j++) {
-					System.out.print(A[i][j] + " ");
-				}
-				System.out.println(b[i]);
-			}
-			System.out.println("-----------------------");
 		}
-
 
 		// обратный проход
 		double[] x = new double[n];
